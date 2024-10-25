@@ -1,6 +1,6 @@
 "Klasör Desenleri" alanına "9H-C*" yazın (virgülle ayırarak birden fazla desen ekleyebilirsiniz)
 
-
+![Açıklama](screenshots/ffsync.png)
 Klasör Desenleri
 9H-C*,TC-C*,onde*
 Dosya Desenleri
