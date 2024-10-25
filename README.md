@@ -7,8 +7,6 @@ Klasör Desenleri
 Dosya Desenleri
 *.txt,*.dat,*.qar,*.xml,*.tag,*.log,*.xlsx
 
-pyinstaller --onefile --windowed --icon=sync.ico --version-file=version.txt --upx-dir=upx-folder sync_app.py
-
 # Dosya Senkronizasyon Uygulaması
 
 ## Özellikler
@@ -118,15 +116,6 @@ File-Folder-Sync is a Python-based application that provides automated file sync
 - Windows 7 or higher
 - Minimum 2GB RAM
 - Python 3.8 or higher (not required for exe version)
-
-## Building from Source
-```bash
-# Install required packages
-pip install -r requirements.txt
-
-# Build executable
-pyinstaller --onefile --windowed --icon=sync.ico --version-file=version.txt sync_app.py
-```
 
 ## License
 MIT License
