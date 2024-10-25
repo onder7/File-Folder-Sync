@@ -87,7 +87,52 @@ pyinstaller --onefile --windowed --icon=sync.ico --version-file=version.txt --up
 
 ## Lisans
 MIT License
+# File-Folder-Sync Application
 
+## Overview
+File-Folder-Sync is a Python-based application that provides automated file synchronization between folders. It offers a user-friendly GUI interface and various features for file management and synchronization.
+
+## Features
+- Folder and file-based synchronization
+- Automatic synchronization and scheduling
+- Customizable file and folder patterns
+- Multi-threaded support for fast copying
+- Backup functionality
+- Detailed logging
+- User-friendly interface
+
+## Installation
+1. Download the latest release
+2. Run `sync.exe`
+3. Required folders and config file will be created automatically on first run
+
+## Usage
+1. Source Folder: Select the folder containing files to be synchronized
+2. Target Folder: Select the destination folder for synchronization
+3. Folder Patterns: Specify which folders to synchronize (e.g., "9H-C*")
+4. File Patterns: Specify which files to synchronize (e.g., "*.wgl")
+5. Check Interval: Set the waiting time for synchronization check (in seconds)
+
+## System Requirements
+- Windows 7 or higher
+- Minimum 2GB RAM
+- Python 3.8 or higher (not required for exe version)
+
+## Building from Source
+```bash
+# Install required packages
+pip install -r requirements.txt
+
+# Build executable
+pyinstaller --onefile --windowed --icon=sync.ico --version-file=version.txt sync_app.py
+```
+
+## License
+MIT License
+
+## Contact
+- Email: [onder7@gmail.com]
+- GitHub: [https://github.com/onder7]
 ## İletişim
 - E-posta: [onder7@gmail.com]
 - GitHub: [https://github.com/onder7]
