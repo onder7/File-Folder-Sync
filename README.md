@@ -1,128 +1,120 @@
-"Klasör Desenleri" alanına "9H-C*" yazın (virgülle ayırarak birden fazla desen ekleyebilirsiniz)
-
-![File-Folder-Sync](screenshots/ffsync.png)
-
-Klasör Desenleri
-9H-C*,TC-C*,onde*
-Dosya Desenleri
-*.txt,*.dat,*.qar,*.xml,*.tag,*.log,*.xlsx
-
 # Dosya Senkronizasyon Uygulaması
+![File-Folder-Sync](screenshots/ffsync.png)
+# Dosya ve Klasör Senkronizasyon Uygulaması
 
-## Özellikler
-- Klasör ve dosya bazlı senkronizasyon
-- Otomatik senkronizasyon ve zamanlama
-- Özelleştirilebilir dosya ve klasör desenleri
-- Çoklu thread desteği ile hızlı kopyalama
-- Yedekleme özelliği
-- Detaylı loglama
-- Kullanıcı dostu arayüz
+![Version](https://img.shields.io/badge/versiyon-2.0.0-blue)
+![Status](https://img.shields.io/badge/durum-kararlı-green)
+![License](https://img.shields.io/badge/lisans-MIT-orange)
 
-## Kurulum
-1. Uygulamayı indirin
+<div align="center">
+
+![Ana Ekran](screenshots/main_window.png)
+
+*Dosya Senkronizasyon Uygulaması Ana Ekranı*
+
+</div>
+
+## 📋 Genel Bakış
+Bu uygulama, klasörler arasında otomatik dosya senkronizasyonu sağlayan, kullanıcı dostu bir arayüze sahip Python tabanlı bir yazılımdır.
+
+## ✨ Özellikler
+- ✅ Klasör ve dosya bazlı senkronizasyon
+- ✅ Otomatik senkronizasyon ve zamanlama
+- ✅ Özelleştirilebilir dosya ve klasör desenleri
+- ✅ Çoklu thread desteği ile hızlı kopyalama
+- ✅ Yedekleme özelliği
+- ✅ Detaylı loglama
+- ✅ Kullanıcı dostu arayüz
+
+## 🚀 Kurulum
+1. Son sürümü indirin
 2. `sync.exe` dosyasını çalıştırın
-3. İlk çalıştırmada otomatik olarak gerekli klasörler ve config dosyası oluşturulacaktır
+3. İlk çalıştırmada gerekli klasörler ve ayar dosyası otomatik oluşturulacaktır
 
-## Kullanım
-1. Kaynak Klasör: Senkronize edilecek dosyaların bulunduğu klasör
-2. Hedef Klasör: Dosyaların kopyalanacağı klasör
-3. Klasör Desenleri: Hangi klasörlerin senkronize edileceği (örn: "9H-C*")
-4. Dosya Desenleri: Hangi dosyaların senkronize edileceği (örn: "*.wgl")
-5. Kontrol Aralığı: Senkronizasyon kontrolü için bekleme süresi (saniye)
+## 📖 Kullanım Kılavuzu
 
-## Ayarlar
-- **Klasör Desenleri**: Senkronize edilecek klasörleri belirler
-  - Örnek: "9H-C*" (9H-C ile başlayan tüm klasörler)
-  - Birden fazla desen için virgül kullanın: "9H-C*, TEST*"
+### 1️⃣ Klasör Seçimi
+![Klasör Seçimi](screenshots/folder_selection.png)
+- **Kaynak Klasör:** Senkronize edilecek dosyaların bulunduğu klasör
+- **Hedef Klasör:** Dosyaların kopyalanacağı klasör
 
-- **Dosya Desenleri**: Senkronize edilecek dosyaları belirler
-  - Örnek: "*.wgl" (wgl uzantılı tüm dosyalar)
-  - Birden fazla desen için virgül kullanın: "*.wgl, *.txt"
+### 2️⃣ Desen Yapılandırması
+![Desen Ayarları](screenshots/patterns.png)
 
-- **Hariç Tutulan Desenler**: Senkronizasyona dahil edilmeyecek öğeler
-  - Örnek: ".git/*, *.tmp"
+> [!IMPORTANT]
+> **Klasör Desenleri Örnekleri:**
+> ```
+> 9H-C*       # 9H-C ile başlayan klasörler
+> TEST*       # TEST ile başlayan klasörler
+> *DATA*      # İçinde DATA geçen klasörler
+> ```
 
-- **Kontrol Aralığı**: Senkronizasyon kontrol sıklığı (saniye)
-  - Önerilen: 10-60 saniye arası
+> [!NOTE]
+> **Dosya Desenleri Örnekleri:**
+> ```
+> *.wgl       # Tüm .wgl dosyaları
+> *.txt       # Tüm text dosyaları
+> data*.xml   # data ile başlayan XML dosyaları
+> ```
 
-- **Thread Sayısı**: Paralel kopyalama işlemi sayısı
-  - Önerilen: 2-8 arası
+### 3️⃣ Zamanlama Ayarları
+- **Kontrol Aralığı:** Senkronizasyon kontrolü için bekleme süresi (saniye)
+- **Önerilen:** 10-60 saniye arası
 
-## Loglar
-- Loglar `logs` klasöründe tutulur
-- Her gün için ayrı log dosyası oluşturulur
-- Format: `file_sync_YYYYMMDD.log`
+### 4️⃣ Ek Ayarlar
+- Dosya yedekleme
+- Thread sayısı
+- Tarih filtreleri
 
-## Yedekleme
-- "Değiştirilen Dosyaları Yedekle" seçeneği aktif edildiğinde:
-  - Değiştirilen dosyaların yedeği alınır
-  - Yedek format: `dosyaadi.uzanti.bak.timestamp`
-
-## Sistem Gereksinimleri
+## ⚙️ Sistem Gereksinimleri
 - Windows 7 veya üzeri
 - Minimum 2GB RAM
 - Python 3.8 veya üzeri (exe versiyonu için gerekli değil)
 
-## Güvenlik
-- Uygulama sadece belirlenen klasörler üzerinde çalışır
-- Sistem dosyalarına müdahale etmez
-- Tüm işlemler loglanır
+## 🛠️ Kaynak Koddan Derleme
+```bash
+# Gerekli paketleri yükle
+pip install -r requirements.txt
 
-## Bilinen Sorunlar
-- Bazı antivirüs yazılımları exe dosyasını yanlış algılayabilir
-- Çok büyük dosyalarda (>1GB) bellekten dolayı yavaşlama olabilir
+# Exe dosyası oluştur
+pyinstaller --onefile --windowed --icon=sync.ico --version-file=version.txt sync_app.py
+```
 
-## Sürüm Geçmişi
+## ⚠️ Hata Yönetimi
+![Hata Penceresi](screenshots/error_dialog.png)
+
+Sık karşılaşılan hatalar ve çözümleri:
+- 🔴 "Kaynak klasör bulunamadı": Klasör yolunu kontrol edin
+- 🔴 "Geçersiz desen": Klasör/dosya desenlerini doğrulayın
+- 🔴 "Erişim reddedildi": Klasör izinlerini kontrol edin
+
+## 📝 Sürüm Geçmişi
+
 ### v2.0.0 (2024-02-16)
-- İlk sürüm
-- Temel senkronizasyon özellikleri
-- GUI arayüz
-- Loglama sistemi
+- ✨ İlk sürüm
+- ✨ Grafiksel kullanıcı arayüzü
+- ✨ Çoklu thread desteği
+- ✨ Tarih filtreleme
+- ✨ Desen eşleştirme
 
-## Geliştirici Notları
-- PyInstaller ile exe oluşturuldu
-- Çoklu thread desteği ile performans optimizasyonu
-- Hata yakalama ve raporlama sistemi
+## 📱 İletişim
+- 📧 E-posta: [onder7@gmail.com]
+- 🌐 GitHub: [github.com/onder7]
 
-## Lisans
-MIT License
-# File-Folder-Sync Application
+## ⚖️ Lisans
+Bu proje MIT lisansı altında lisanslanmıştır.
 
-## Overview
-File-Folder-Sync is a Python-based application that provides automated file synchronization between folders. It offers a user-friendly GUI interface and various features for file management and synchronization.
+## 🤝 Katkıda Bulunma
+1. Fork edin
+2. Feature branch oluşturun (`git checkout -b yeni-ozellik`)
+3. Değişikliklerinizi commit edin (`git commit -am 'Yeni özellik eklendi'`)
+4. Branch'inizi push edin (`git push origin yeni-ozellik`)
+5. Pull Request oluşturun
 
-## Features
-- Folder and file-based synchronization
-- Automatic synchronization and scheduling
-- Customizable file and folder patterns
-- Multi-threaded support for fast copying
-- Backup functionality
-- Detailed logging
-- User-friendly interface
+## 🙏 Teşekkür
+Bu projeye katkıda bulunan herkese teşekkürler.
 
-## Installation
-1. Download the latest release
-2. Run `sync.exe`
-3. Required folders and config file will be created automatically on first run
+---
 
-## Usage
-1. Source Folder: Select the folder containing files to be synchronized
-2. Target Folder: Select the destination folder for synchronization
-3. Folder Patterns: Specify which folders to synchronize (e.g., "9H-C*")
-4. File Patterns: Specify which files to synchronize (e.g., "*.wgl")
-5. Check Interval: Set the waiting time for synchronization check (in seconds)
-
-## System Requirements
-- Windows 7 or higher
-- Minimum 2GB RAM
-- Python 3.8 or higher (not required for exe version)
-
-## License
-MIT License
-
-## Contact
-- Email: [onder7@gmail.com]
-- GitHub: [https://github.com/onder7]
-## İletişim
-- E-posta: [onder7@gmail.com]
-- GitHub: [https://github.com/onder7]
+> [!NOTE]
+> Detaylı bilgi için [GitHub Wiki](https://github.com/onder7/File-Folder-Sync/wiki) sayfamızı ziyaret edin.
