@@ -194,6 +194,14 @@ file_pattern = "*.wgl"
 ![Status](https://img.shields.io/badge/status-stable-green)
 ![License](https://img.shields.io/badge/license-MIT-orange)
 
-## Contact
-📧 Email: <span style="color: #3498DB">onder7@gmail.com</span>
-🌐 GitHub: <span style="color: #3498DB">github.com/onder7</span>
+Teknik destek için onder7@gmail.com iletişime geçin.
+Önder AKÖZ / System & Network Specialist
+<div align="center">
+**..:: Onder Monder ::..**
+*Profesyonel IT Çözümleri*
+</div>
+---
+## 📱 İletişim ve Destek
+- 📧 E-posta: [onder7@gmail.com]
+- 🌐 GitHub: [github.com/onder7]
+- 📞 Destek: [+90 541 411 30 22]
